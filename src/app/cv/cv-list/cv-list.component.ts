@@ -21,6 +21,20 @@ export class CvListComponent implements OnInit {
       'Översättning från engelska och nederländska till svenska och målgruppsanpassning samt skapande av innehåll till den svenska versionen av Aruba.com, med hjälp av CMS-verktygen TYPO3, Drupal och Hippo. Översättning av nyhetsbrev och annat marknadsföringsmaterial. Hantering av översättningar till andra nordiska språk. Korrekturläsning av översättningar utförda av externa partners. Skapande och övervakande av inlägg på sociala medier, inklusive bildredigering.'
     ),
   ];
+  utb: CV[] = [
+    new CV(
+      'Kvalificerad yrkeshögskoleexamen, Frontendutvecklare',
+      'EC Utbildning',
+      'okt 2020 - jun 2022',
+      'Kurser: Agila projektmetoder, UX och grafisk design, HTML & CSS, Javascript, Backend för frontendutvecklare, praktik, examensarbete.'
+    ),
+    new CV(
+      'Masterexamen i iranska språk',
+      'Uppsala universitet',
+      'sep 2010 - feb 2020',
+      'Inriktning mot persiska och översättningsvetenskap.'
+    ),
+  ];
 
   constructor() {}
 

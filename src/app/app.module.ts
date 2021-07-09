@@ -9,6 +9,8 @@ import { CvComponent } from './cv/cv.component';
 import { CvListComponent } from './cv/cv-list/cv-list.component';
 import { CvItemComponent } from './cv/cv-item/cv-item.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CvComponent,
     CvListComponent,
     CvItemComponent,
+    ContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

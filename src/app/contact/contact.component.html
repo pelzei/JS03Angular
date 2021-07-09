@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col bild">
+      <div class="my-3">
+        <h4>Kontakta mig</h4>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div id="user-data">
+            <div class="form-group">
+              <label for="sender">Namn:</label>
+              <input
+                type="text"
+                id="sender"
+                class="form-control"
+                ngModel
+                name="sender"
+                required
+                minlength="3"
+                #sender="ngModel"
+              />
+              <span class="help-block" *ngIf="!sender.valid && sender.touched"
+                >Ditt namn måste bestå av minst tre bokstäver!</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="email">E-postadress:</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                ngModel
+                name="email"
+                required
+                email
+                #email="ngModel"
+              />
+              <span class="help-block" *ngIf="!email.valid && email.touched"
+                >Fyll i en giltig e-postadress!</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="meddelande">Meddelande:</label>
+            <textarea
+              class="form-control"
+              name="meddelande"
+              id="meddelande"
+              rows="10"
+              ngModel
+              required
+              minlength="10"
+              #meddelande="ngModel"
+            ></textarea>
+            <span
+              class="help-block"
+              *ngIf="!meddelande.valid && meddelande.touched"
+              >Meddelandet måste bestå av minst 10 bokstäver!</span
+            >
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
+            Skicka
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="col bild">
+      <img
+        src="https://media2.vonzeipel.com/2021/06/cv_bild.jpg"
+        alt="Bild på Kenneth"
+      />
+    </div>
+  </div>
+</div>

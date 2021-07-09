@@ -1,13 +1,26 @@
-<div class="row">
-  <div class="col-xs-5">
-    <li class="card p-3 m-3clearfix" *ngFor="let item of cv">
-      <div class="pull-left">
-        <p class="list-group-item-danger">{{ item.time }}</p>
-        <h4 class="list-group-item-heading">{{ item.title }}</h4>
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col">
+      <h4>Arbetslivserfarenhet</h4>
+      <li class="card p-1 m-2 brodtext" *ngFor="let item of cv">
+        <p class="list-group-item-danger">
+          <strong>{{ item.time }}</strong>
+        </p>
+        <h5 class="list-group-item-heading">{{ item.title }}</h5>
         <p class="list-group-item-primary">{{ item.company }}</p>
-        <p class="list-group-item-info">{{ item.description }}</p>
-      </div>
-    </li>
-    <app-cv-item></app-cv-item>
+        <p class="list-group-item-primary">{{ item.description }}</p>
+      </li>
+    </div>
+    <div class="col">
+      <h4>Utbildning</h4>
+      <li class="card p-1 m-2 brodtext" *ngFor="let item of utb">
+        <p class="list-group-item-danger">
+          <strong>{{ item.time }}</strong>
+        </p>
+        <h5 class="list-group-item-heading">{{ item.title }}</h5>
+        <p class="list-group-item-primary">{{ item.company }}</p>
+        <p class="list-group-item-primary">{{ item.description }}</p>
+      </li>
+    </div>
   </div>
 </div>
